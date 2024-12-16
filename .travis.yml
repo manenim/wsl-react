@@ -1,0 +1,11 @@
+sudo: required
+services:
+  - docker
+
+
+before_install: 
+  - docker build -t manenim/wsl-react -f Dockerfile.dev .  
+
+
+script: 
+  - docker run manenim/wsl-react npm run lint
