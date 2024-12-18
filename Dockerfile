@@ -11,5 +11,6 @@ RUN npm run build
 
 # build out the nginx server
 FROM nginx 
+EXPOSE 80
 #copy over the build folder 
 COPY --from=builder /app/dist /usr/share/nginx/html
